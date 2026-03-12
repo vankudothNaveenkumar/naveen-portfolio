@@ -2,44 +2,80 @@
 <html>
 <head>
 <title>Naveen Kumar | Data Analyst</title>
+
 <style>
 
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
 margin:0;
-background:#f5f7fb;
+background:#f3f4f6;
 }
 
 header{
-background:#0f172a;
+background:linear-gradient(90deg,#1e3a8a,#2563eb);
 color:white;
-padding:40px;
+padding:60px 20px;
 text-align:center;
 }
 
+header h1{
+font-size:40px;
+margin:0;
+}
+
+header p{
+font-size:18px;
+}
+
 section{
-padding:40px;
-max-width:900px;
+max-width:1000px;
 margin:auto;
+padding:40px;
 }
 
 h2{
-color:#0f172a;
+color:#1e3a8a;
+margin-bottom:20px;
+}
+
+.skills span{
+background:#e0e7ff;
+padding:8px 14px;
+margin:5px;
+display:inline-block;
+border-radius:20px;
 }
 
 .project{
 background:white;
-padding:20px;
-margin-bottom:20px;
+padding:25px;
+margin-bottom:25px;
 border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project h3{
+margin-top:0;
 }
 
 footer{
-background:#0f172a;
+background:#111827;
 color:white;
 text-align:center;
 padding:20px;
+}
+
+button{
+background:#2563eb;
+border:none;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1e40af;
 }
 
 </style>
@@ -48,37 +84,51 @@ padding:20px;
 <body>
 
 <header>
+
 <h1>Naveen Kumar Vankudoth</h1>
+
 <p>Data Analyst | SQL | Python | Power BI</p>
-<p>Email: mrnaveenvankudoth@gmail.com</p>
+
+<p>Turning data into actionable business insights</p>
+
+<a href="mailto:mrnaveenvankudoth@gmail.com">
+<button>Contact Me</button>
+</a>
+
 </header>
+
 
 <section>
 
 <h2>About Me</h2>
+
 <p>
-Data Analyst with 4+ years of experience transforming raw data into business insights.
-Skilled in SQL, Python, Power BI, and data visualization.
+Data Analyst with 4+ years of experience transforming raw data into meaningful insights.
+Specialized in SQL, Python, Power BI, and predictive analytics.
 Recently completed a Master's in Business Analytics.
 </p>
 
 </section>
 
+
 <section>
 
 <h2>Skills</h2>
 
-<ul>
-<li>SQL</li>
-<li>Python</li>
-<li>Power BI</li>
-<li>Tableau</li>
-<li>ETL Pipelines</li>
-<li>Data Visualization</li>
-<li>Forecasting</li>
-</ul>
+<div class="skills">
+
+<span>SQL</span>
+<span>Python</span>
+<span>Power BI</span>
+<span>Tableau</span>
+<span>ETL Pipelines</span>
+<span>Data Visualization</span>
+<span>Forecasting</span>
+
+</div>
 
 </section>
+
 
 <section>
 
@@ -86,20 +136,21 @@ Recently completed a Master's in Business Analytics.
 
 <div class="project">
 <h3>Sales Performance Dashboard</h3>
-<p>Built Power BI dashboard analyzing sales performance across regions.</p>
+<p>Power BI dashboard analyzing sales performance across multiple regions.</p>
 </div>
 
 <div class="project">
 <h3>Customer Churn Prediction</h3>
-<p>Machine learning model predicting customer churn with 85% accuracy.</p>
+<p>Machine learning model predicting churn with 85% accuracy.</p>
 </div>
 
 <div class="project">
 <h3>Financial KPI Dashboard</h3>
-<p>Tableau dashboard for financial reporting and KPI monitoring.</p>
+<p>Tableau dashboard for financial KPI tracking and reporting automation.</p>
 </div>
 
 </section>
+
 
 <footer>
 
