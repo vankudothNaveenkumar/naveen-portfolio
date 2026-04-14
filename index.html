@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naveen Kumar Vankudoth | Data Analyst</title>
+  <title>Naveen Kumar Vankudoth | Data Analyst Portfolio</title>
   <meta
     name="description"
-    content="Portfolio of Naveen Kumar Vankudoth, Data Analyst skilled in SQL, Python, Power BI, Tableau, ETL, and business analytics."
+    content="Portfolio of Naveen Kumar Vankudoth, Data Analyst skilled in SQL, Python, Power BI, Tableau, ETL, dashboarding, predictive analytics, and business analytics."
   />
   <style>
     :root{
       --bg:#f8fafc;
       --surface:#ffffff;
       --surface-2:#eef4ff;
+      --surface-3:#f1f5f9;
       --text:#0f172a;
       --muted:#475569;
       --primary:#2563eb;
       --primary-dark:#1d4ed8;
       --border:#e2e8f0;
       --shadow:0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-hover:0 18px 40px rgba(15, 23, 42, 0.12);
       --radius:18px;
       --max-width:1120px;
     }
@@ -141,7 +143,7 @@
 
     .hero .summary{
       color:rgba(255,255,255,0.82);
-      max-width:720px;
+      max-width:760px;
       margin-bottom:28px;
       font-size:1rem;
     }
@@ -236,11 +238,13 @@
 
     .section-text{
       color:var(--muted);
-      max-width:760px;
+      max-width:780px;
       margin-bottom:30px;
     }
 
-    .about-grid{
+    .about-grid,
+    .contact-grid,
+    .resume-grid{
       display:grid;
       grid-template-columns:1.2fr 0.8fr;
       gap:24px;
@@ -252,6 +256,15 @@
       border-radius:var(--radius);
       padding:28px;
       box-shadow:var(--shadow);
+      transition:0.25s ease;
+    }
+
+    .card:hover,
+    .project-card:hover,
+    .skill-card:hover,
+    .timeline-item:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow-hover);
     }
 
     .card h3{
@@ -297,6 +310,7 @@
       border-radius:18px;
       padding:22px;
       box-shadow:var(--shadow);
+      transition:0.25s ease;
     }
 
     .skill-card h3{
@@ -335,10 +349,6 @@
       padding:24px;
       box-shadow:var(--shadow);
       transition:0.25s ease;
-    }
-
-    .project-card:hover{
-      transform:translateY(-6px);
     }
 
     .project-top{
@@ -380,11 +390,55 @@
       margin-bottom:8px;
     }
 
-    .contact-grid{
+    .timeline{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
-      align-items:stretch;
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .timeline-item{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      transition:0.25s ease;
+    }
+
+    .timeline-top{
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      align-items:flex-start;
+      margin-bottom:12px;
+      flex-wrap:wrap;
+    }
+
+    .timeline-top h3{
+      font-size:1.15rem;
+      margin-bottom:4px;
+    }
+
+    .timeline-top span{
+      color:var(--muted);
+      font-size:0.94rem;
+      font-weight:600;
+    }
+
+    .timeline-item ul{
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .timeline-item li{
+      margin-bottom:8px;
+    }
+
+    .resume-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
     }
 
     .contact-links{
@@ -422,6 +476,7 @@
       .hero-grid,
       .about-grid,
       .contact-grid,
+      .resume-grid,
       .skills-grid,
       .projects-grid{
         grid-template-columns:1fr;
@@ -450,7 +505,8 @@
         font-size:1.6rem;
       }
 
-      .hero-buttons{
+      .hero-buttons,
+      .resume-actions{
         flex-direction:column;
         align-items:stretch;
       }
@@ -474,6 +530,8 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -482,37 +540,40 @@
   <header class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow">Open to Data Analyst & Business Analyst roles</div>
+        <div class="eyebrow">Open to Data Analyst, BI, and Business Analytics roles</div>
         <h1>Naveen Kumar Vankudoth</h1>
-        <img src="nvn%20dp.jpeg" alt="Naveen Kumar Vankudoth" class="profile-pic">
+        <img src="nvn dp.jpeg" alt="Naveen Kumar Vankudoth" class="profile-pic">
 
         <p class="subtitle">Data Analyst | SQL | Python | Power BI | Tableau</p>
         <p class="summary">
-          Data Analyst with 4+ years of experience turning raw data into clear business insights
-          through dashboards, analytics, reporting automation, and predictive modeling.
+          Data Analyst with 4+ years of experience delivering actionable insights through advanced analytics,
+          data visualization, scalable data pipelines, KPI design, and executive reporting. Skilled in SQL,
+          Python, Power BI, Tableau, ETL/ELT development, predictive analytics, and stakeholder-focused storytelling.
         </p>
 
         <div class="hero-buttons">
           <a class="btn btn-primary" href="mailto:mrnaveenvankudoth@gmail.com">Contact Me</a>
-          <a class="btn btn-primary" href="Naveen%20resume%20dice%201.pdf" target="_blank">Download Resume</a>
+          <a class="btn btn-primary" href="Naveen_updated (1)(5).pdf" target="_blank">View Resume</a>
+          <a class="btn btn-secondary" href="Naveen_updated (1)(5).pdf" download>Download Resume</a>
           <a class="btn btn-secondary" href="https://www.linkedin.com/in/naveen-kumar-vankudoth-428020325/" target="_blank">LinkedIn</a>
           <a class="btn btn-secondary" href="https://github.com/vankudothNaveenkumar" target="_blank">GitHub</a>
+          <a class="btn btn-secondary" href="https://vankudothnaveenkumar.github.io/naveen-portfolio/" target="_blank">Portfolio Link</a>
         </div>
 
         <div class="hero-meta">
           <span>Irving, Texas, USA</span>
-          <span>Master’s in Business Analytics</span>
-          <span>SQL • Python • BI</span>
+          <span>MBA in Business Analytics</span>
+          <span>SQL • Python • BI • ETL</span>
         </div>
       </div>
 
       <div class="hero-card">
         <h3>What I bring</h3>
         <ul class="highlight-list">
-          <li>Build executive dashboards for faster, data-driven decisions</li>
+          <li>Build executive dashboards that make data easier to act on</li>
           <li>Automate reporting workflows to save time and improve accuracy</li>
-          <li>Analyze business performance trends across sales, finance, and operations</li>
-          <li>Translate complex data into clear insights for stakeholders</li>
+          <li>Analyze customer, finance, and operational performance trends</li>
+          <li>Translate complex business questions into clear analytical solutions</li>
         </ul>
       </div>
     </div>
@@ -522,18 +583,19 @@
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <p class="section-text">
-        I am a Data Analyst with strong experience in business analytics, data visualization, KPI reporting,
-        and workflow automation. My focus is on solving business problems with clean analysis, practical insights,
-        and scalable reporting solutions.
+        I am a Data Analyst with hands-on experience in business analytics, dashboarding, KPI reporting,
+        ETL workflows, data quality, and workflow automation. My focus is on solving business problems with
+        practical insights, scalable reporting solutions, and measurable impact.
       </p>
 
       <div class="about-grid">
         <div class="card">
           <h3>Professional Summary</h3>
           <p>
-            Experienced in SQL, Python, Power BI, Tableau, ETL/ELT workflows, and predictive analytics.
-            I recently completed my Master’s in Business Analytics and enjoy turning complex datasets into
-            decision-ready insights that support growth, performance, and strategy.
+            I have 4+ years of experience working across analytics, reporting, and data engineering functions.
+            My work includes designing KPIs, building executive dashboards, automating reporting processes,
+            integrating multi-source data, and delivering predictive analytics use cases such as churn and forecasting.
+            I recently completed my MBA in Business Analytics and enjoy turning complex datasets into decision-ready insights.
           </p>
         </div>
 
@@ -543,16 +605,16 @@
             <span>Analytics and reporting experience</span>
           </div>
           <div class="stat">
-            <strong>85%</strong>
-            <span>Churn model prediction accuracy</span>
+            <strong>35%</strong>
+            <span>Reduction in data latency</span>
           </div>
           <div class="stat">
-            <strong>40%</strong>
-            <span>Reduction in manual reporting time</span>
+            <strong>22%</strong>
+            <span>Improvement in retention strategy effectiveness</span>
           </div>
           <div class="stat">
             <strong>50%</strong>
-            <span>Faster KPI reporting workflow</span>
+            <span>Reduction in manual reporting effort</span>
           </div>
         </div>
       </div>
@@ -563,7 +625,8 @@
     <div class="container">
       <h2 class="section-title">Core Skills</h2>
       <p class="section-text">
-        My toolkit combines data analysis, dashboarding, reporting automation, and business-focused problem solving.
+        My toolkit combines data analysis, dashboarding, reporting automation, cloud-based ETL workflows,
+        and business-focused problem solving.
       </p>
 
       <div class="skills-grid">
@@ -574,6 +637,7 @@
             <span class="tag">SQL</span>
             <span class="tag">Pandas</span>
             <span class="tag">NumPy</span>
+            <span class="tag">PySpark</span>
           </div>
         </div>
 
@@ -582,8 +646,9 @@
           <div class="tags">
             <span class="tag">Power BI</span>
             <span class="tag">Tableau</span>
-            <span class="tag">Excel</span>
-            <span class="tag">Dashboards</span>
+            <span class="tag">Plotly</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Executive Reporting</span>
           </div>
         </div>
 
@@ -593,17 +658,19 @@
             <span class="tag">ETL / ELT</span>
             <span class="tag">AWS Glue</span>
             <span class="tag">Airflow</span>
-            <span class="tag">Automation</span>
+            <span class="tag">Redshift</span>
+            <span class="tag">Snowflake</span>
           </div>
         </div>
 
         <div class="skill-card">
           <h3>Analytics</h3>
           <div class="tags">
-            <span class="tag">Forecasting</span>
             <span class="tag">Regression</span>
             <span class="tag">Clustering</span>
             <span class="tag">Hypothesis Testing</span>
+            <span class="tag">Forecasting</span>
+            <span class="tag">Churn Modeling</span>
           </div>
         </div>
       </div>
@@ -614,53 +681,147 @@
     <div class="container">
       <h2 class="section-title">Featured Projects</h2>
       <p class="section-text">
-        These projects highlight my ability to combine analytics, storytelling, and business impact.
+        These projects reflect the kind of business impact I have created through analytics, automation, and reporting.
       </p>
 
       <div class="projects-grid">
         <div class="project-card">
           <div class="project-top">
-            <h3>Sales Performance Dashboard</h3>
-            <span class="project-badge">Power BI + SQL</span>
+            <h3>Executive KPI Dashboard</h3>
+            <span class="project-badge">Power BI + Tableau</span>
           </div>
           <p>
-            Built an executive dashboard to monitor sales performance across products, regions, and time periods.
+            Designed executive-ready dashboards for customer and operations metrics to support faster, data-informed decisions.
           </p>
           <ul>
-            <li>Designed KPI views for revenue, growth, and top-performing products</li>
-            <li>Automated SQL-based data extraction and transformation</li>
-            <li>Improved visibility into business performance and trends</li>
+            <li>Defined KPI views aligned to business and operational priorities</li>
+            <li>Delivered clear reporting for leadership and stakeholder teams</li>
+            <li>Improved operational efficiency by 18%</li>
           </ul>
         </div>
 
         <div class="project-card">
           <div class="project-top">
             <h3>Customer Churn Prediction</h3>
-            <span class="project-badge">Python + ML</span>
+            <span class="project-badge">Python + PySpark + XGBoost</span>
           </div>
           <p>
-            Developed a predictive model to identify customers at high risk of churn and support retention strategy.
+            Built churn prediction models to identify at-risk customers and improve retention planning.
           </p>
           <ul>
-            <li>Performed exploratory data analysis to identify churn drivers</li>
-            <li>Built and evaluated classification models with strong accuracy</li>
-            <li>Delivered 85% prediction accuracy for business targeting</li>
+            <li>Developed predictive use cases for churn propensity and forecasting</li>
+            <li>Supported model deployment handoffs with cleaner documentation</li>
+            <li>Increased retention strategy effectiveness by 22%</li>
           </ul>
         </div>
 
         <div class="project-card">
           <div class="project-top">
-            <h3>Financial KPI Dashboard</h3>
-            <span class="project-badge">Tableau + SQL</span>
+            <h3>ETL Pipeline Automation</h3>
+            <span class="project-badge">AWS Glue + Airflow + SQL</span>
           </div>
           <p>
-            Created a financial reporting dashboard to streamline recurring KPI analysis and executive updates.
+            Built automated ingestion and transformation workflows for reliable reporting refreshes and cleaner downstream analytics.
           </p>
           <ul>
-            <li>Built dashboard views for revenue trends and performance tracking</li>
-            <li>Automated recurring reporting workflows</li>
-            <li>Reduced manual reporting effort by 50%</li>
+            <li>Reduced reporting latency across data pipelines</li>
+            <li>Improved reporting frequency and consistency</li>
+            <li>Cut data latency by 35%</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <p class="section-text">
+        My professional journey spans analytics, reporting automation, cloud data workflows, and business-facing dashboard development.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-top">
+            <div>
+              <h3>Assurant — Data Analyst</h3>
+              <span>United States | January 2025 – Present</span>
+            </div>
+          </div>
+          <ul>
+            <li>Partnered with business teams to define KPIs and delivered executive-ready dashboards in Power BI and Tableau, improving operational efficiency by 18%.</li>
+            <li>Wrote SQL and Python analyses to identify behavioral trends and supported hypothesis testing, contributing to a 15% uplift in campaign targeting accuracy.</li>
+            <li>Built automated ingestion and transformation jobs using AWS Glue and Airflow, reducing data latency by 35%.</li>
+            <li>Implemented churn prediction models using PySpark MLlib and XGBoost, increasing retention strategy effectiveness by 22%.</li>
+            <li>Improved data accuracy by 25% and reduced data defects by 40% through QA checks and governance practices.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-top">
+            <div>
+              <h3>Pfizer — Data Analyst</h3>
+              <span>India | March 2022 – July 2023</span>
+            </div>
+          </div>
+          <ul>
+            <li>Performed exploratory data analysis using Python, Pandas, NumPy, and Seaborn to surface trends, correlations, and anomalies.</li>
+            <li>Engineered SQL transformations to normalize and aggregate data for analytics and self-service reporting.</li>
+            <li>Automated recurring reports using SQL and Excel macros, cutting manual workload by approximately 50%.</li>
+            <li>Built visuals with Matplotlib, Plotly, Power BI, and Tableau, improving stakeholder engagement by 25%.</li>
+            <li>Applied regression, clustering, and hypothesis testing to guide strategy and improve operational efficiency by 12%.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-top">
+            <div>
+              <h3>CitiGroup — Data Analyst</h3>
+              <span>India | July 2019 – January 2022</span>
+            </div>
+          </div>
+          <ul>
+            <li>Supported data migrations to cloud warehouses such as Redshift and Snowflake, improving scalability and downstream access.</li>
+            <li>Collaborated with finance and operations teams to refine forecasting inputs and perform detailed variance analysis.</li>
+            <li>Developed documented ETL/ELT workflows and data dictionaries to improve onboarding and cross-team consistency.</li>
+            <li>Designed Tableau and Power BI dashboards to present financial KPIs and variance trends for executive stakeholders.</li>
+            <li>Assisted compliance teams during audits by generating traceable reports and validating data extracts.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="container">
+      <h2 class="section-title">Resume</h2>
+      <p class="section-text">
+        You can view or download my updated resume for more detail on my experience, education, certifications, and technical skills.
+      </p>
+
+      <div class="resume-grid">
+        <div class="card">
+          <h3>Resume Access</h3>
+          <p>
+            My resume covers analytics delivery across Assurant, Pfizer, and CitiGroup, including KPI design,
+            dashboard development, ETL/ELT workflows, data quality, predictive analytics, and executive reporting.
+          </p>
+          <div class="resume-actions">
+            <a class="btn btn-primary" href="Naveen_updated (1)(5).pdf" target="_blank">View Resume</a>
+            <a class="btn btn-secondary" href="Naveen_updated (1)(5).pdf" download style="color:#2563eb; border-color:#bfdbfe; background:#eff6ff;">Download Resume</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Education & Certifications</h3>
+          <p><strong>MBA, Business Analytics</strong> — Midwestern State University, Wichita Falls, TX | CGPA: 3.27</p>
+          <p><strong>B.E., Electronics & Communication Engineering</strong> — Institute of Aeronautical Engineering, India | CGPA: 3.17</p>
+          <br>
+          <p><strong>Certifications:</strong></p>
+          <p>Deloitte Data Analytics Virtual Internship – 2025</p>
+          <p>Python Certification</p>
+          <p>Microsoft Certified: Data Analyst Associate (Power BI)</p>
+          <p>AWS Certified Data Analytics – Specialty</p>
         </div>
       </div>
     </div>
@@ -677,8 +838,8 @@
         <div class="card">
           <h3>Let’s Connect</h3>
           <p>
-            Whether you’re hiring for a Data Analyst role, reviewing candidates, or looking for someone who can
-            build strong reporting and analytics solutions, I’d be glad to connect.
+            If you are hiring for a Data Analyst or Business Analyst role, or looking for someone who can build strong
+            reporting and analytics solutions, I’d be glad to connect.
           </p>
 
           <div class="contact-links">
@@ -700,9 +861,10 @@
         <div class="card">
           <h3>Quick Snapshot</h3>
           <p><strong>Role Focus:</strong> Data Analyst / Business Analyst</p>
-          <p><strong>Key Strengths:</strong> Dashboards, Reporting Automation, KPI Design, Predictive Analytics</p>
-          <p><strong>Tools:</strong> SQL, Python, Power BI, Tableau, Excel, ETL/ELT</p>
+          <p><strong>Key Strengths:</strong> Dashboards, KPI Reporting, Reporting Automation, ETL/ELT, Predictive Analytics</p>
+          <p><strong>Tools:</strong> SQL, Python, Power BI, Tableau, AWS Glue, Airflow, Redshift, Snowflake</p>
           <p><strong>Location:</strong> Irving, Texas, USA</p>
+          <p><strong>Phone:</strong> +1 (940) 882-8578</p>
         </div>
       </div>
     </div>
