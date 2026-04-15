@@ -242,7 +242,8 @@
     }
 
     .about-grid,
-    .contact-grid{
+    .contact-grid,
+    .graduation-grid{
       display:grid;
       grid-template-columns:1.2fr 0.8fr;
       gap:24px;
@@ -260,7 +261,8 @@
     .card:hover,
     .project-card:hover,
     .skill-card:hover,
-    .timeline-item:hover{
+    .timeline-item:hover,
+    .cert-card:hover{
       transform:translateY(-5px);
       box-shadow:var(--shadow-hover);
     }
@@ -432,6 +434,76 @@
       margin-bottom:8px;
     }
 
+    .graduation-grid{
+      align-items:center;
+    }
+
+    .grad-photo{
+      width:100%;
+      height:420px;
+      object-fit:cover;
+      border-radius:20px;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      background:#e5e7eb;
+    }
+
+    .certifications-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .cert-card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:20px;
+      box-shadow:var(--shadow);
+      transition:0.25s ease;
+    }
+
+    .cert-preview{
+      width:100%;
+      height:320px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      overflow:hidden;
+      background:#f8fafc;
+      margin-bottom:16px;
+    }
+
+    .cert-preview object{
+      width:100%;
+      height:100%;
+      border:none;
+    }
+
+    .cert-title-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:10px;
+    }
+
+    .cert-title-row h3{
+      font-size:1.1rem;
+    }
+
+    .cert-card p{
+      color:var(--muted);
+      margin-bottom:16px;
+      font-size:0.95rem;
+    }
+
+    .cert-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
     .contact-links{
       display:grid;
       gap:14px;
@@ -467,8 +539,10 @@
       .hero-grid,
       .about-grid,
       .contact-grid,
+      .graduation-grid,
       .skills-grid,
-      .projects-grid{
+      .projects-grid,
+      .certifications-grid{
         grid-template-columns:1fr;
       }
 
@@ -484,6 +558,10 @@
       .nav-links{
         justify-content:center;
       }
+
+      .grad-photo{
+        height:340px;
+      }
     }
 
     @media (max-width: 640px){
@@ -495,7 +573,8 @@
         font-size:1.6rem;
       }
 
-      .hero-buttons{
+      .hero-buttons,
+      .cert-actions{
         flex-direction:column;
         align-items:stretch;
       }
@@ -506,6 +585,10 @@
 
       .stats{
         grid-template-columns:1fr;
+      }
+
+      .cert-preview{
+        height:260px;
       }
     }
   </style>
@@ -520,6 +603,7 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#graduation">Graduation</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </div>
@@ -781,39 +865,100 @@
     </div>
   </section>
 
+  <section id="graduation">
+    <div class="container">
+      <h2 class="section-title">Graduation Highlight</h2>
+      <p class="section-text">
+        A proud milestone in my journey — completing my MBA in Business Analytics from Midwestern State University.
+      </p>
+
+      <div class="graduation-grid">
+        <div class="card">
+          <h3>MBA in Business Analytics</h3>
+          <p>
+            I graduated with a Master of Business Administration in Business Analytics from
+            <strong>Midwestern State University</strong>. This program strengthened my foundation in
+            business intelligence, analytics strategy, reporting, decision-making, and data storytelling.
+          </p>
+          <br>
+          <p>
+            This milestone reflects both my technical growth and my commitment to building a strong analytics career
+            in the United States.
+          </p>
+        </div>
+
+        <div>
+          <img src="Grad.heic" alt="Graduation photo of Naveen Kumar Vankudoth" class="grad-photo">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="certifications">
     <div class="container">
       <h2 class="section-title">Certifications</h2>
       <p class="section-text">
-        Professional certifications that validate my skills in data analytics and business intelligence.
+        These certifications are displayed directly in my portfolio to highlight verified learning in analytics,
+        business intelligence, and problem-solving.
       </p>
 
-      <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; margin-top:20px;">
-        <div class="project-card">
-          <div class="project-top">
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <div class="cert-preview">
+            <object data="Deloitte%20certification.pdf" type="application/pdf">
+              <p style="padding:16px;">Preview not available. Use the button below to open the certificate.</p>
+            </object>
+          </div>
+          <div class="cert-title-row">
             <h3>Deloitte Data Analytics</h3>
             <span class="project-badge">Certification</span>
           </div>
           <p>
-            Deloitte Data Analytics Virtual Internship covering real-world business problems,
-            data cleaning, visualization, and insights generation.
+            Deloitte Data Analytics Virtual Internship covering real-world business problems, data cleaning,
+            visualization, and insights generation.
           </p>
-          <a class="btn btn-primary" href="Deloitte%20certification.pdf" target="_blank">
-            View Certificate
-          </a>
+          <div class="cert-actions">
+            <a class="btn btn-primary" href="Deloitte%20certification.pdf" target="_blank">View</a>
+            <a class="btn btn-secondary" href="Deloitte%20certification.pdf" download style="color:#2563eb; border-color:#bfdbfe; background:#eff6ff;">Download</a>
+          </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-top">
+        <div class="cert-card">
+          <div class="cert-preview">
+            <object data="Rapid%20minor%20certification.pdf" type="application/pdf">
+              <p style="padding:16px;">Preview not available. Use the button below to open the certificate.</p>
+            </object>
+          </div>
+          <div class="cert-title-row">
             <h3>Rapid Minor Certification</h3>
             <span class="project-badge">Certification</span>
           </div>
           <p>
             Certification demonstrating analytical thinking, technical skills, and problem-solving ability.
           </p>
-          <a class="btn btn-primary" href="Rapid%20minor%20certification.pdf" target="_blank">
-            View Certificate
-          </a>
+          <div class="cert-actions">
+            <a class="btn btn-primary" href="Rapid%20minor%20certification.pdf" target="_blank">View</a>
+            <a class="btn btn-secondary" href="Rapid%20minor%20certification.pdf" download style="color:#2563eb; border-color:#bfdbfe; background:#eff6ff;">Download</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-preview">
+            <object data="python.pdf" type="application/pdf">
+              <p style="padding:16px;">Preview not available. Use the button below to open the certificate.</p>
+            </object>
+          </div>
+          <div class="cert-title-row">
+            <h3>Python Certification</h3>
+            <span class="project-badge">Certification</span>
+          </div>
+          <p>
+            Certification highlighting Python knowledge for analytics, data handling, and problem-solving workflows.
+          </p>
+          <div class="cert-actions">
+            <a class="btn btn-primary" href="python.pdf" target="_blank">View</a>
+            <a class="btn btn-secondary" href="python.pdf" download style="color:#2563eb; border-color:#bfdbfe; background:#eff6ff;">Download</a>
+          </div>
         </div>
       </div>
     </div>
@@ -857,6 +1002,7 @@
           <p><strong>Tools:</strong> SQL, Python, Power BI, Tableau, AWS Glue, Airflow, Redshift, Snowflake</p>
           <p><strong>Location:</strong> Irving, Texas, USA</p>
           <p><strong>Phone:</strong> +1 (940) 882-8578</p>
+          <p><strong>Education:</strong> MBA in Business Analytics, Midwestern State University</p>
         </div>
       </div>
     </div>
