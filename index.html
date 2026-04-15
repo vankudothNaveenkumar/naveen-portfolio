@@ -242,8 +242,7 @@
     }
 
     .about-grid,
-    .contact-grid,
-    .resume-grid{
+    .contact-grid{
       display:grid;
       grid-template-columns:1.2fr 0.8fr;
       gap:24px;
@@ -433,13 +432,6 @@
       margin-bottom:8px;
     }
 
-    .resume-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:18px;
-    }
-
     .contact-links{
       display:grid;
       gap:14px;
@@ -475,7 +467,6 @@
       .hero-grid,
       .about-grid,
       .contact-grid,
-      .resume-grid,
       .skills-grid,
       .projects-grid{
         grid-template-columns:1fr;
@@ -504,8 +495,7 @@
         font-size:1.6rem;
       }
 
-      .hero-buttons,
-      .resume-actions{
+      .hero-buttons{
         flex-direction:column;
         align-items:stretch;
       }
@@ -531,7 +521,6 @@
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#certifications">Certifications</a>
-        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -799,7 +788,7 @@
         Professional certifications that validate my skills in data analytics and business intelligence.
       </p>
 
-      <div class="projects-grid">
+      <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; margin-top:20px;">
         <div class="project-card">
           <div class="project-top">
             <h3>Deloitte Data Analytics</h3>
@@ -826,66 +815,6 @@
             View Certificate
           </a>
         </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <h3>Power BI Data Analyst</h3>
-            <span class="project-badge">Credential</span>
-          </div>
-          <p>
-            Certification and learning focused on data modeling, dashboarding, DAX concepts, and business intelligence reporting.
-          </p>
-          <a class="btn btn-primary" href="Naveen_resume%20Aprl.updated.pdf" target="_blank">
-            View Resume Credential
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <section id="resume">
-  <div class="container">
-    <h2 class="section-title">Resume</h2>
-    <p class="section-text">
-      You can view or download my updated resume for more detail on my experience, education, certifications, and technical skills.
-    </p>
-
-    <div class="resume-grid">
-      <div class="card">
-        <h3>Resume Access</h3>
-        <p>
-          My resume covers analytics delivery across Assurant, Pfizer, and CitiGroup, including KPI design,
-          dashboard development, ETL/ELT workflows, data quality, predictive analytics, and executive reporting.
-        </p>
-        <div class="resume-actions">
-          <a class="btn btn-primary" href="Naveen_resume%20Aprl.updated.pdf" target="_blank">View Resume</a>
-          <a class="btn btn-secondary" href="Naveen_resume%20Aprl.updated.pdf" download style="color:#2563eb; border-color:#bfdbfe; background:#eff6ff;">Download Resume</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Education & Certifications</h3>
-        <p><strong>MBA, Business Analytics</strong> — Midwestern State University, Wichita Falls, TX | CGPA: 3.27</p>
-        <p><strong>B.E., Electronics & Communication Engineering</strong> — Institute of Aeronautical Engineering, India | CGPA: 3.17</p>
-        <br>
-        <p><strong>Certifications:</strong></p>
-        <p>Deloitte Data Analytics Virtual Internship – 2025</p>
-        <p>Python Certification</p>
-        <p>Microsoft Certified: Data Analyst Associate (Power BI)</p>
-        <p>AWS Certified Data Analytics – Specialty</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <div style="margin-top:24px; border:1px solid #e2e8f0; border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(15,23,42,0.08); background:white;">
-        <iframe
-          src="Naveen_resume%20Aprl.updated.pdf"
-          width="100%"
-          height="700"
-          style="border:none;"
-          title="Naveen Resume">
-        </iframe>
       </div>
     </div>
   </section>
